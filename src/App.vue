@@ -1,5 +1,5 @@
 <template>
-  <MyMenu />
+  <MyMenu v-if="$router.currentRoute.name != 'login'" />
 
   <div class="container">
   
@@ -16,6 +16,11 @@ import MyMenu from '@/components/menu/MyMenu'
 export default {
   components: {
     MyMenu
+  },
+  data(){
+    return {
+      
+    }
   }
 }
 </script>
@@ -43,13 +48,22 @@ body {
 }
 
 .container{
-  width: 100%;
-  max-width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  flex-wrap: wrap;
-  
+  display: block;
+  margin-top: 15px;
+}
+
+.titulo {
+  font-weight: 600;
+  color: #363636;
+}
+
+hr {
+  margin: 0;
+}
+
+.sub-container {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 </style>

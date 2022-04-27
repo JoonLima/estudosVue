@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 import TelaLogin from '../views/TelaLogin.vue';
 import TelaDashboard from '../views/TelaDashboard.vue';
 import ControleDeProdutos from '../views/ControleDeProdutos.vue';
@@ -36,7 +36,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes
 })
 

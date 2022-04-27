@@ -18,7 +18,7 @@
 
     <MyButton 
       text="Entrar" 
-      :callback="() => alert('Fui clicado!!')"
+      :callback="login"
     />
   
   </div>
@@ -38,6 +38,11 @@ export default {
     return {
       
     }
+  },
+  methods: {
+    login(){
+      this.$router.push({ path: '/' })
+    }
   }
 }
 </script>
@@ -55,6 +60,7 @@ export default {
 .logo {
   text-align: center;
   color: #333;
+  font-size: 22px;
 }
 
 </style>
